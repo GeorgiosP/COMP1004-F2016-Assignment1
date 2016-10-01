@@ -95,7 +95,7 @@ namespace SharpMailOrder
         private void ClearButton_Click(object sender, EventArgs e)
         {
             //Clear all of the form's text fields
-            EmployeeHoursWorkedTextBox.Clear();
+            
             EmployeeSalesBonusTextBox.Clear();
             EmployeeNameTextBox.Clear();
             EmployeeIdTextBox.Clear();
