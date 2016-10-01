@@ -55,12 +55,13 @@
             this.LanguageBox.Controls.Add(this.FrenchRadioButton);
             this.LanguageBox.Controls.Add(this.EnglishRadioButton);
             this.LanguageBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LanguageBox.Location = new System.Drawing.Point(262, 12);
+            this.LanguageBox.Location = new System.Drawing.Point(345, 59);
             this.LanguageBox.Name = "LanguageBox";
             this.LanguageBox.Size = new System.Drawing.Size(200, 99);
             this.LanguageBox.TabIndex = 0;
             this.LanguageBox.TabStop = false;
             this.LanguageBox.Text = "Language";
+            this.LanguageBox.Enter += new System.EventHandler(this.LanguageBox_Enter);
             // 
             // FrenchRadioButton
             // 
@@ -72,6 +73,7 @@
             this.FrenchRadioButton.TabStop = true;
             this.FrenchRadioButton.Text = "Français";
             this.FrenchRadioButton.UseVisualStyleBackColor = true;
+            this.FrenchRadioButton.CheckedChanged += new System.EventHandler(this.FrenchRadioButton_CheckedChanged);
             // 
             // EnglishRadioButton
             // 
@@ -83,47 +85,52 @@
             this.EnglishRadioButton.TabStop = true;
             this.EnglishRadioButton.Text = "English";
             this.EnglishRadioButton.UseVisualStyleBackColor = true;
+            this.EnglishRadioButton.CheckedChanged += new System.EventHandler(this.EnglishRadioButton_CheckedChanged);
             // 
             // LogoPicutreBox
             // 
             this.LogoPicutreBox.Image = ((System.Drawing.Image)(resources.GetObject("LogoPicutreBox.Image")));
-            this.LogoPicutreBox.Location = new System.Drawing.Point(10, 12);
+            this.LogoPicutreBox.Location = new System.Drawing.Point(25, 12);
             this.LogoPicutreBox.Name = "LogoPicutreBox";
-            this.LogoPicutreBox.Size = new System.Drawing.Size(234, 180);
+            this.LogoPicutreBox.Size = new System.Drawing.Size(234, 177);
+            this.LogoPicutreBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.LogoPicutreBox.TabIndex = 1;
             this.LogoPicutreBox.TabStop = false;
             // 
             // CalculateButton
             // 
-            this.CalculateButton.Location = new System.Drawing.Point(66, 448);
+            this.CalculateButton.Location = new System.Drawing.Point(102, 448);
             this.CalculateButton.Name = "CalculateButton";
-            this.CalculateButton.Size = new System.Drawing.Size(75, 23);
+            this.CalculateButton.Size = new System.Drawing.Size(88, 23);
             this.CalculateButton.TabIndex = 2;
             this.CalculateButton.Text = "Calculate";
             this.CalculateButton.UseVisualStyleBackColor = true;
+            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // ClearButton
             // 
-            this.ClearButton.Location = new System.Drawing.Point(351, 448);
+            this.ClearButton.Location = new System.Drawing.Point(428, 448);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(75, 23);
             this.ClearButton.TabIndex = 3;
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // PrintButton
             // 
-            this.PrintButton.Location = new System.Drawing.Point(213, 448);
+            this.PrintButton.Location = new System.Drawing.Point(263, 448);
             this.PrintButton.Name = "PrintButton";
             this.PrintButton.Size = new System.Drawing.Size(75, 23);
             this.PrintButton.TabIndex = 4;
             this.PrintButton.Text = "Print";
             this.PrintButton.UseVisualStyleBackColor = true;
+            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
             // 
             // EmployeeName
             // 
             this.EmployeeName.AutoSize = true;
-            this.EmployeeName.Location = new System.Drawing.Point(48, 222);
+            this.EmployeeName.Location = new System.Drawing.Point(99, 261);
             this.EmployeeName.Name = "EmployeeName";
             this.EmployeeName.Size = new System.Drawing.Size(115, 17);
             this.EmployeeName.TabIndex = 5;
@@ -132,7 +139,7 @@
             // EmployeeID
             // 
             this.EmployeeID.AutoSize = true;
-            this.EmployeeID.Location = new System.Drawing.Point(48, 255);
+            this.EmployeeID.Location = new System.Drawing.Point(99, 294);
             this.EmployeeID.Name = "EmployeeID";
             this.EmployeeID.Size = new System.Drawing.Size(91, 17);
             this.EmployeeID.TabIndex = 6;
@@ -142,7 +149,7 @@
             // EmployeeHoursWorked
             // 
             this.EmployeeHoursWorked.AutoSize = true;
-            this.EmployeeHoursWorked.Location = new System.Drawing.Point(56, 296);
+            this.EmployeeHoursWorked.Location = new System.Drawing.Point(99, 335);
             this.EmployeeHoursWorked.Name = "EmployeeHoursWorked";
             this.EmployeeHoursWorked.Size = new System.Drawing.Size(99, 17);
             this.EmployeeHoursWorked.TabIndex = 7;
@@ -152,7 +159,7 @@
             // EmployeeTotalSales
             // 
             this.EmployeeTotalSales.AutoSize = true;
-            this.EmployeeTotalSales.Location = new System.Drawing.Point(56, 324);
+            this.EmployeeTotalSales.Location = new System.Drawing.Point(99, 363);
             this.EmployeeTotalSales.Name = "EmployeeTotalSales";
             this.EmployeeTotalSales.Size = new System.Drawing.Size(79, 17);
             this.EmployeeTotalSales.TabIndex = 8;
@@ -161,7 +168,7 @@
             // EmployeeSalesBonus
             // 
             this.EmployeeSalesBonus.AutoSize = true;
-            this.EmployeeSalesBonus.Location = new System.Drawing.Point(56, 352);
+            this.EmployeeSalesBonus.Location = new System.Drawing.Point(99, 391);
             this.EmployeeSalesBonus.Name = "EmployeeSalesBonus";
             this.EmployeeSalesBonus.Size = new System.Drawing.Size(91, 17);
             this.EmployeeSalesBonus.TabIndex = 9;
@@ -169,36 +176,37 @@
             // 
             // EmployeeNameTextBox
             // 
-            this.EmployeeNameTextBox.Location = new System.Drawing.Point(213, 227);
+            this.EmployeeNameTextBox.Location = new System.Drawing.Point(290, 261);
             this.EmployeeNameTextBox.Name = "EmployeeNameTextBox";
             this.EmployeeNameTextBox.Size = new System.Drawing.Size(169, 22);
             this.EmployeeNameTextBox.TabIndex = 10;
             // 
             // EmployeeIdTextBox
             // 
-            this.EmployeeIdTextBox.Location = new System.Drawing.Point(213, 255);
+            this.EmployeeIdTextBox.Location = new System.Drawing.Point(290, 289);
             this.EmployeeIdTextBox.Name = "EmployeeIdTextBox";
             this.EmployeeIdTextBox.Size = new System.Drawing.Size(169, 22);
             this.EmployeeIdTextBox.TabIndex = 11;
             // 
             // EmployeeHoursWorkedTextBox
             // 
-            this.EmployeeHoursWorkedTextBox.Location = new System.Drawing.Point(213, 291);
+            this.EmployeeHoursWorkedTextBox.Location = new System.Drawing.Point(290, 335);
             this.EmployeeHoursWorkedTextBox.Name = "EmployeeHoursWorkedTextBox";
             this.EmployeeHoursWorkedTextBox.Size = new System.Drawing.Size(213, 22);
             this.EmployeeHoursWorkedTextBox.TabIndex = 12;
             // 
             // EmployeeTotalSalesTextBox
             // 
-            this.EmployeeTotalSalesTextBox.Location = new System.Drawing.Point(213, 319);
+            this.EmployeeTotalSalesTextBox.Location = new System.Drawing.Point(290, 363);
             this.EmployeeTotalSalesTextBox.Name = "EmployeeTotalSalesTextBox";
             this.EmployeeTotalSalesTextBox.Size = new System.Drawing.Size(213, 22);
             this.EmployeeTotalSalesTextBox.TabIndex = 13;
             // 
             // EmployeeSalesBonusTextBox
             // 
-            this.EmployeeSalesBonusTextBox.Location = new System.Drawing.Point(213, 347);
+            this.EmployeeSalesBonusTextBox.Location = new System.Drawing.Point(290, 391);
             this.EmployeeSalesBonusTextBox.Name = "EmployeeSalesBonusTextBox";
+            this.EmployeeSalesBonusTextBox.ReadOnly = true;
             this.EmployeeSalesBonusTextBox.Size = new System.Drawing.Size(213, 22);
             this.EmployeeSalesBonusTextBox.TabIndex = 14;
             // 
@@ -206,7 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 483);
+            this.ClientSize = new System.Drawing.Size(622, 483);
             this.Controls.Add(this.EmployeeSalesBonusTextBox);
             this.Controls.Add(this.EmployeeTotalSalesTextBox);
             this.Controls.Add(this.EmployeeHoursWorkedTextBox);
